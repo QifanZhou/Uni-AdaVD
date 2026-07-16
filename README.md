@@ -2,7 +2,10 @@
 
 **Universal Concept Erasure for Visual Generation via Orthogonal Value Decomposition**
 
-[**Project Website**](https://qifanzhou.github.io/) | [**Arxiv Preprint**](paper/Uni-AdaVD.pdf)
+<h3>
+  <a href="https://qifanzhou.github.io/"><strong>Project Website</strong></a> |
+  <a href="paper/Uni-AdaVD.pdf"><strong>Arxiv Preprint</strong></a>
+</h3>
 
 ![Uni-AdaVD Overview](img/fig2.png)
 
@@ -12,9 +15,9 @@ Uni-AdaVD is an inference-time concept erasure framework for text-conditioned vi
 
 Uni-AdaVD extends the original AdaVD formulation from the earlier U-Net / SD v1_4 setting to diffusion transformers, autoregressive image generation, and text-to-video generation, while also broadening the erasure scope from explicit concepts to more implicit unsafe concepts.
 
-Earlier AdaVD work:
+Earlier AdaVD work: *Precise, Fast, and Low-cost Concept Erasure in Value Space: Orthogonal Complement Matters* (CVPR 2025).
 
-- [**Paper**](https://arxiv.org/abs/2412.06143)
+- [**Paper (CVPR 2025)**](https://arxiv.org/abs/2412.06143)
 - [**Code**](https://github.com/WYuan1001/AdaVD)
 
 This repository contains the public inference code for five generator backbones:
