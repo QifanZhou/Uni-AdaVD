@@ -1,12 +1,12 @@
 # Uni-AdaVD
 
-**Universal Concept Erasure for Visual Generation via Orthogonal Value Decomposition**
+## Universal Concept Erasure for Visual Generation via Orthogonal Value Decomposition
 
 **Authors:** Qifan Zhou, Yuan Wang, Yanbin Hao, Xiang Wang, Kuien Liu, Richang Hong, and Meng Wang
 
 <h3>
-  <a href="https://qifanzhou.github.io/"><strong>Project Website</strong></a> |
-  <a href="https://qifanzhou.github.io/assets/TPAMI_2026_AdaVD_3.pdf"><strong>Arxiv Preprint</strong></a>
+  <a href="https://qifanzhou.github.io/Uni-AdaVD/"><strong>Project Website</strong></a> |
+  <a href="https://qifanzhou.github.io/Uni-AdaVD/assets/TPAMI_2026_AdaVD_3.pdf"><strong>Arxiv Preprint</strong></a>
 </h3>
 
 ![Uni-AdaVD Overview](img/fig2.png)
