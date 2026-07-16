@@ -1,0 +1,15 @@
+# Tested with the public sd1-4, sd3, and flux inference entry points.
+# Install a CUDA-matched PyTorch build separately if needed.
+torch==2.0.1
+diffusers==0.30.3
+transformers==4.40.2
+accelerate==0.32.1
+huggingface_hub==0.36.1
+safetensors==0.5.3
+sentencepiece==0.1.99
+protobuf==3.20.3
+pandas==2.2.3
+numpy==1.26.4
+Pillow==11.1.0
+einops==0.7.0
+tqdm==4.67.1
