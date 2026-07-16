@@ -4,7 +4,7 @@
 
 <h3>
   <a href="https://qifanzhou.github.io/"><strong>Project Website</strong></a> |
-  <a href="paper/Uni-AdaVD.pdf"><strong>Arxiv Preprint</strong></a>
+  <strong>Arxiv Preprint: Coming Soon</strong>
 </h3>
 
 ![Uni-AdaVD Overview](img/fig2.png)
@@ -17,7 +17,7 @@ Uni-AdaVD extends the original AdaVD formulation from the earlier U-Net / SD v1_
 
 Earlier AdaVD work: *Precise, Fast, and Low-cost Concept Erasure in Value Space: Orthogonal Complement Matters* (CVPR 2025).
 
-- [**Paper (CVPR 2025)**](https://arxiv.org/abs/2412.06143)
+- [**Paper**](https://arxiv.org/abs/2412.06143)
 - [**Code**](https://github.com/WYuan1001/AdaVD)
 
 This repository contains the public inference code for five generator backbones:
