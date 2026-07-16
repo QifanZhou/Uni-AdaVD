@@ -4,7 +4,7 @@
 
 <h3>
   <a href="https://qifanzhou.github.io/"><strong>Project Website</strong></a> |
-  <strong>Arxiv Preprint: Coming Soon</strong>
+  <a href="https://qifanzhou.github.io/assets/TPAMI_2026_AdaVD_3.pdf"><strong>Arxiv Preprint</strong></a>
 </h3>
 
 ![Uni-AdaVD Overview](img/fig2.png)
