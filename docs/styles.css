@@ -75,7 +75,7 @@ a {
   display: flex;
   align-items: center;
   justify-content: space-between;
-  border: 1px solid var(--line);
+  border: none;
   border-radius: 999px;
   background: transparent;
   backdrop-filter: none;
@@ -109,7 +109,7 @@ a {
 
 .section-frame,
 .content-section {
-  border: 1px solid var(--line);
+  border: none;
   border-radius: var(--radius-lg);
   background: transparent;
   backdrop-filter: none;
@@ -255,7 +255,7 @@ a {
   min-height: 48px;
   padding: 0 18px;
   border-radius: 999px;
-  border: 1px solid transparent;
+  border: none;
   font-size: 0.96rem;
   font-weight: 600;
   text-decoration: none;
@@ -317,7 +317,7 @@ a {
 .media-card,
 .citation-box,
 .result-category {
-  border: 1px solid var(--line-soft);
+  border: none;
   border-radius: 24px;
   background: transparent;
 }
@@ -376,7 +376,7 @@ a {
 
 .question-card {
   padding: 22px;
-  border: 1px solid var(--line-soft);
+  border: none;
   border-radius: 22px;
   background: transparent;
 }
@@ -395,7 +395,7 @@ a {
   display: inline-flex;
   margin-top: 10px;
   padding: 6px 10px;
-  border: 1px solid rgba(197, 95, 56, 0.22);
+  border: none;
   border-radius: 999px;
   background: rgba(197, 95, 56, 0.08);
   font-family: var(--font-mono);
@@ -422,7 +422,7 @@ a {
 
 .legacy-card {
   padding: 24px;
-  border: 1px solid var(--line-soft);
+  border: none;
   border-radius: 24px;
   background: transparent;
 }
@@ -454,7 +454,7 @@ a {
   align-items: center;
   min-height: 34px;
   padding: 0 12px;
-  border: 1px solid rgba(15, 124, 115, 0.16);
+  border: none;
   border-radius: 999px;
   background: rgba(15, 124, 115, 0.08);
   font-family: var(--font-mono);
@@ -489,7 +489,7 @@ a {
   align-items: center;
   min-height: 42px;
   padding: 0 16px;
-  border: 1px solid rgba(49, 40, 33, 0.12);
+  border: none;
   border-radius: 999px;
   background: rgba(255, 255, 255, 0.72);
   text-decoration: none;
@@ -531,7 +531,7 @@ a {
   gap: 10px;
   margin-bottom: 20px;
   padding: 14px;
-  border: 1px solid var(--line-soft);
+  border: none;
   border-radius: 22px;
   background: transparent;
   backdrop-filter: none;
@@ -542,7 +542,7 @@ a {
   padding: 10px 14px;
   border-radius: 999px;
   background: transparent;
-  border: 1px solid var(--line-soft);
+  border: none;
   font-size: 1.06rem;
   font-weight: 600;
 }
@@ -575,7 +575,7 @@ a {
   overflow: hidden;
   border-radius: 28px;
   background: transparent;
-  box-shadow: inset 0 0 0 1px rgba(49, 40, 33, 0.07);
+  box-shadow: none;
   user-select: none;
   touch-action: pan-y;
   cursor: grab;
@@ -629,7 +629,7 @@ a {
   grid-template-rows: auto minmax(0, 1fr) auto;
   overflow: hidden;
   padding: 16px;
-  border: 1px solid var(--line-soft);
+  border: none;
   border-radius: 24px;
   background: transparent;
   box-shadow: 0 18px 34px rgba(45, 34, 24, 0.08);
@@ -642,7 +642,7 @@ a {
   align-self: flex-start;
   margin-bottom: 12px;
   padding: 7px 11px;
-  border: 1px solid rgba(197, 95, 56, 0.18);
+  border: none;
   border-radius: 999px;
   background: rgba(197, 95, 56, 0.08);
   font-family: var(--font-mono);
@@ -672,7 +672,7 @@ a {
 .gallery-card figcaption {
   margin-top: 14px;
   padding: 16px 8px 6px;
-  border-top: 1px solid var(--line-soft);
+  border-top: none;
   font-size: 1.42rem;
 }
 
@@ -712,7 +712,7 @@ a {
   min-width: 52px;
   height: 52px;
   padding: 0;
-  border: 1px solid var(--line-soft);
+  border: none;
   border-radius: 50%;
   background: rgba(255, 255, 255, 0.92);
   backdrop-filter: blur(12px);
@@ -807,7 +807,7 @@ a {
   position: absolute;
   top: 16px;
   right: 16px;
-  border: 1px solid var(--line-soft);
+  border: none;
   background: rgba(255, 255, 255, 0.82);
   color: var(--ink);
   border-radius: 999px;
@@ -824,7 +824,7 @@ a {
 .site-footer {
   margin-top: 20px;
   padding: 22px 26px;
-  border: 1px solid var(--line);
+  border: none;
   border-radius: 24px;
   background: transparent;
 }
