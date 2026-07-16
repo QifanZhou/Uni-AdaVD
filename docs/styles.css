@@ -305,9 +305,24 @@ a {
 .section-intro {
   max-width: none;
   margin: 16px 0 0;
-  font-size: 1.54rem;
+  font-size: 1.68rem;
   color: var(--muted);
   line-height: 1.82;
+}
+
+#abstract {
+  width: 100vw;
+  margin-left: calc(50% - 50vw);
+  margin-right: calc(50% - 50vw);
+  padding: 24px 0;
+  background: #f3f3f3;
+}
+
+#abstract > .section-heading,
+#abstract > .abstract-card {
+  width: min(var(--max-width), calc(100vw - 20px));
+  margin-left: auto;
+  margin-right: auto;
 }
 
 .abstract-card,
@@ -336,7 +351,7 @@ a {
 .legacy-card p,
 .legacy-list li {
   margin: 0;
-  font-size: 1.56rem;
+  font-size: 1.7rem;
   color: var(--muted);
   line-height: 1.9;
 }
@@ -691,7 +706,7 @@ a {
 }
 
 .carousel-note {
-  font-size: 1.08rem;
+  font-size: 1.18rem;
 }
 
 .carousel-controls {
