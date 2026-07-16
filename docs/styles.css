@@ -12,10 +12,10 @@
   --radius-lg: 28px;
   --radius-md: 18px;
   --radius-sm: 12px;
-  --max-width: 1760px;
-  --max-width-results: 1760px;
+  --max-width: 1920px;
+  --max-width-results: 1920px;
   --carousel-gap: 22px;
-  --carousel-card-width: min(1320px, 86vw);
+  --carousel-card-width: min(1500px, 92vw);
   --font-sans: "Source Sans 3", "Inter", "Segoe UI", Arial, sans-serif;
   --font-display: "Libre Baskerville", Georgia, serif;
   --font-serif: "Libre Baskerville", Georgia, serif;
@@ -51,19 +51,20 @@ a {
 }
 
 .page-shell {
-  padding: 18px 18px 40px;
+  padding: 10px 10px 32px;
 }
 
 .site-header,
 .hero,
 .content-section,
 .site-footer {
-  width: min(var(--max-width), 100%);
+  width: min(var(--max-width), calc(100vw - 20px));
   margin: 0 auto;
 }
 
 .results-section {
-  width: min(var(--max-width-results), 100%);
+  width: min(var(--max-width-results), calc(100vw - 20px));
+  margin: 0 auto;
 }
 
 .site-header {
@@ -117,7 +118,7 @@ a {
 }
 
 .hero {
-  padding: 38px 32px;
+  padding: 30px 20px;
 }
 
 .hero-copy {
@@ -210,7 +211,7 @@ a {
 
 .hero-lede {
   max-width: none;
-  width: min(100%, 80ch);
+  width: min(100%, 100ch);
   margin: 24px 0 26px;
   font-size: 1.7rem;
   line-height: 1.78;
@@ -220,7 +221,7 @@ a {
 }
 
 .author-line {
-  width: min(100%, 80ch);
+  width: min(100%, 100ch);
   margin-bottom: 12px;
   font-size: 1.38rem;
   font-weight: 500;
@@ -228,7 +229,7 @@ a {
 }
 
 .affiliation-block {
-  width: min(100%, 80ch);
+  width: min(100%, 100ch);
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
@@ -238,7 +239,7 @@ a {
 }
 
 .hero-actions {
-  width: min(100%, 80ch);
+  width: min(100%, 100ch);
   margin-top: 28px;
   display: flex;
   flex-wrap: wrap;
@@ -285,7 +286,7 @@ a {
 
 .content-section {
   margin-top: 20px;
-  padding: 30px;
+  padding: 24px 20px;
 }
 
 .section-heading {
@@ -862,7 +863,7 @@ a {
 
 @media (max-width: 780px) {
   .page-shell {
-    padding: 12px 12px 28px;
+    padding: 8px 8px 24px;
   }
 
   .site-header {
@@ -882,7 +883,7 @@ a {
 
   .hero,
   .content-section {
-    padding: 22px;
+    padding: 18px 14px;
   }
 
   .hero h1 {
