@@ -2,7 +2,7 @@
 
 **Universal Concept Erasure for Visual Generation via Orthogonal Value Decomposition**
 
-Qifan Zhou, Yuan Wang, Yanbin Hao, Xiang Wang, Kuien Liu, Richang Hong, and Meng Wang
+**Authors:** Qifan Zhou, Yuan Wang, Yanbin Hao, Xiang Wang, Kuien Liu, Richang Hong, and Meng Wang
 
 <h3>
   <a href="https://qifanzhou.github.io/"><strong>Project Website</strong></a> |
