@@ -85,7 +85,7 @@ a {
 
 .brand {
   font-family: var(--font-mono);
-  font-size: 1rem;
+  font-size: 1.08rem;
   text-decoration: none;
   letter-spacing: 0.06em;
   text-transform: uppercase;
@@ -98,7 +98,7 @@ a {
 
 .site-nav a,
 .results-nav a {
-  font-size: 1.02rem;
+  font-size: 1.12rem;
   color: var(--muted);
   text-decoration: none;
 }
@@ -139,7 +139,7 @@ a {
   gap: 8px;
   margin-bottom: 16px;
   font-family: var(--font-mono);
-  font-size: 1.12rem;
+  font-size: 1.26rem;
   text-transform: uppercase;
   letter-spacing: 0.1em;
   color: var(--teal);
@@ -324,6 +324,14 @@ a {
   width: min(var(--max-width), calc(100vw - 20px));
   margin-left: auto;
   margin-right: auto;
+}
+
+#method > .section-heading {
+  text-align: center;
+}
+
+#method > .section-heading .eyebrow {
+  align-self: center;
 }
 
 .abstract-card,
