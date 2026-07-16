@@ -1,0 +1,492 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Uni-AdaVD | Project Page</title>
+  <meta name="description" content="Uni-AdaVD is a universal inference-time concept erasure framework for visual generation across U-Net, DiT, autoregressive, and video models.">
+  <meta property="og:title" content="Uni-AdaVD: Universal Concept Erasure for Visual Generation via Orthogonal Value Decomposition">
+  <meta property="og:description" content="A project page for a universal inference-time concept erasure framework across modern visual generators.">
+  <meta property="og:type" content="website">
+  <meta property="og:image" content="assets/hires/figure2new3.png">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@500;600;700&family=IBM+Plex+Mono:wght@400;500&family=Libre+Baskerville:wght@400;700&family=Source+Sans+3:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <div class="page-shell">
+    <header class="site-header">
+      <a class="brand" href="#top">Uni-AdaVD</a>
+      <nav class="site-nav" aria-label="Primary">
+        <a href="#abstract">Abstract</a>
+        <a href="#earlier-work">Earlier Work</a>
+        <a href="#method">Method</a>
+        <a href="#results">Results</a>
+        <a href="#citation">Citation</a>
+      </nav>
+    </header>
+
+    <main>
+      <section class="hero section-frame" id="top">
+        <div class="hero-copy reveal">
+          <div class="eyebrow">Project Page</div>
+          <div class="hero-title-lockup">
+            <h1>
+              <span class="hero-title-line"><span class="hero-wordmark">Uni-AdaVD</span>: Universal Concept Erasure for Visual Generation</span>
+              <span class="hero-title-line">via Orthogonal Value Decomposition</span>
+            </h1>
+          </div>
+          <p class="hero-lede">
+            A universal inference-time framework that performs concept erasure in the attention value space and
+            transfers across U-Net, DiT, autoregressive image generation, and text-to-video models.
+          </p>
+
+          <div class="author-line">
+            Qifan Zhou*, Yuan Wang*, Yanbin Hao, Xiang Wang, Kuien Liu, Richang Hong, and Meng Wang
+          </div>
+          <div class="affiliation-block">
+            <span>Hefei University of Technology</span>
+            <span>University of Science and Technology of China</span>
+            <span>Institute of Software, Chinese Academy of Sciences</span>
+          </div>
+
+          <div class="hero-actions">
+            <a class="button button-primary" href="assets/TPAMI_2026_AdaVD_3.pdf">Paper</a>
+            <a class="button button-secondary" href="https://github.com/QifanZhou/Uni-AdaVD" target="_blank" rel="noreferrer">Code</a>
+          </div>
+        </div>
+      </section>
+
+      <section class="content-section" id="abstract">
+        <div class="section-heading section-heading-compact reveal">
+          <div class="eyebrow">Abstract</div>
+        </div>
+
+        <article class="abstract-card reveal">
+          <p>
+            Visual generative models inevitably absorb undesirable concepts from uncurated pretraining data, making
+            concept erasure essential for safe deployment. Existing erasure methods, however, are often
+            architecture-specific and struggle to remove target concepts while preserving non-target content and
+            generative priors. We present <strong>Uni-AdaVD, a universal inference-time concept erasure framework</strong> for visual
+            generation. Uni-AdaVD treats <strong>the value space of multimodal attention as a unified intervention space</strong> and
+            introduces <strong>encoder-aware target representation construction</strong> to localize target semantics across
+            heterogeneous text encoders. It further combines <strong>orthogonal value decomposition with a layer-wise adaptive
+            erasing shift</strong> to suppress target semantic directions without updating the original model weights. Extensive
+            experiments on U-Net-, DiT-, and autoregressive image generators, as well as text-to-video models,
+            demonstrate strong performance on single- and multi-concept erasure while preserving non-target priors.
+          </p>
+        </article>
+      </section>
+
+      <section class="content-section" id="earlier-work">
+        <div class="section-heading reveal">
+          <div class="eyebrow">Earlier AdaVD Work</div>
+          <h2>From AdaVD to Uni-AdaVD</h2>
+          <p class="section-intro">
+            Compared with the original AdaVD work on U-Net-based diffusion models, Uni-AdaVD broadens value-space
+            concept erasure to DiT, autoregressive, and text-to-video generators while also addressing more implicit
+            unsafe concepts.
+          </p>
+        </div>
+
+        <div class="legacy-grid">
+          <article class="legacy-card reveal">
+            <div class="legacy-meta-row">
+              <div class="legacy-kicker">Earlier Paper</div>
+              <div class="legacy-badge">CVPR 2025</div>
+            </div>
+            <h3>Precise, Fast, and Low-cost Concept Erasure in Value Space: Orthogonal Complement Matters</h3>
+            <p>
+              The earlier AdaVD work introduces inference-time value-space concept erasure for diffusion models and
+              grounds the intervention in an orthogonal-complement style decomposition, which directly motivates the
+              later OVD-style design in Uni-AdaVD.
+            </p>
+            <div class="legacy-links">
+              <a class="pill-link" href="https://cvpr.thecvf.com/virtual/2025/poster/34263" target="_blank" rel="noreferrer">Paper</a>
+              <a class="pill-link" href="https://github.com/WYuan1001/AdaVD" target="_blank" rel="noreferrer">Code</a>
+            </div>
+          </article>
+
+          <article class="legacy-card reveal">
+            <div class="legacy-kicker">What Uni-AdaVD Adds</div>
+            <ul class="legacy-list">
+              <li>It extends the original U-Net / SD v1-4 setting to DiT, autoregressive, and text-to-video generators.</li>
+              <li>It broadens the erasure scope from the earlier explicit setting to more implicit unsafe concepts and diverse visual targets.</li>
+              <li>It introduces encoder-aware target representation construction together with OVD and LAES to support heterogeneous text encoders while preserving non-target priors.</li>
+            </ul>
+          </article>
+        </div>
+      </section>
+
+      <section class="content-section" id="method">
+        <div class="section-heading reveal">
+          <div class="eyebrow">Method Overview</div>
+          <h2>Where to erase, what to erase, and how to erase safely</h2>
+        </div>
+
+        <div class="method-layout">
+          <figure class="wide-figure reveal">
+            <img src="assets/hires/figure2new3.png" alt="Uni-AdaVD method overview" loading="lazy">
+          </figure>
+
+          <div class="question-stack">
+            <article class="question-card reveal">
+              <div class="question-index">01</div>
+              <div class="question-tag">Value Space</div>
+              <h3>Where to erase?</h3>
+              <p>Intervene in the multimodal attention value space, which stays applicable across U-Net, DiT, autoregressive, and video generators.</p>
+            </article>
+            <article class="question-card reveal">
+              <div class="question-index">02</div>
+              <div class="question-tag">ETRC</div>
+              <h3>What to erase?</h3>
+              <p>Encoder-Aware Target Representation Construction localizes the target semantics differently for CLIP-like and T5-like text encoders.</p>
+            </article>
+            <article class="question-card reveal">
+              <div class="question-index">03</div>
+              <div class="question-tag">OVD + LAES</div>
+              <h3>How to erase safely?</h3>
+              <p>Orthogonal Value Decomposition removes target-aligned directions, while Layer-wise Adaptive Erasing Shift preserves non-target priors.</p>
+            </article>
+          </div>
+        </div>
+
+        <div class="method-detail-grid">
+          <article class="text-card reveal">
+            <div class="eyebrow eyebrow-small">Why Value Space</div>
+            <h3>Value interventions change semantic identity more directly than key swaps</h3>
+            <p>
+              In FLUX joint attention, swapping value sequences changes the generated concept identity much more
+              strongly than swapping key sequences. This makes value vectors the more direct and transferable control
+              surface for concept erasure.
+            </p>
+            <p>
+              That observation motivates Uni-AdaVD to intervene on the value side first, then use OVD and LAES to
+              suppress the target semantics without broadly damaging the model priors.
+            </p>
+          </article>
+
+          <figure class="media-card reveal media-card-tight">
+            <img src="assets/hires/figure3.png" alt="Value-space analysis figure" loading="lazy">
+          </figure>
+        </div>
+      </section>
+
+      <section class="content-section results-section" id="results">
+        <div class="section-heading reveal">
+          <div class="eyebrow">Results</div>
+          <h2>Qualitative results across tasks and architectures</h2>
+          <p class="section-intro">
+            Qualitative comparisons are organized by task to highlight erasure efficacy and non-target preservation
+            across image and video generation models.
+          </p>
+        </div>
+
+        <div class="results-nav reveal" aria-label="Result categories">
+          <a href="#results-nsfw">NSFW</a>
+          <a href="#results-instance">Instance</a>
+          <a href="#results-style">Style</a>
+          <a href="#results-celebrity">Celebrity</a>
+          <a href="#results-video">Video</a>
+          <a href="#results-transferability">Transferability</a>
+        </div>
+
+        <section class="result-category reveal" id="results-nsfw">
+          <div class="result-header">
+            <div>
+              <div class="result-kicker">NSFW</div>
+              <h3>Safety concept erasure from <strong>U-Net</strong> to <strong>DiT</strong> and <strong>autoregressive</strong> models</h3>
+              <p>Qualitative results for targeted nudity erasure and broader unsafe concept suppression across <strong>U-Net</strong>, <strong>DiT</strong>, and <strong>autoregressive</strong> generation architectures.</p>
+            </div>
+          </div>
+
+          <div class="results-carousel" data-carousel data-autoplay="6500">
+            <div class="carousel-viewport">
+              <div class="carousel-track">
+                <figure class="gallery-card carousel-slide">
+                  <div class="paper-ref">Fig. 6</div>
+                  <div class="gallery-media">
+                    <img src="assets/hires/sd14_nudity_new1.png" alt="SD v1-4 targeted nudity erasure results" loading="lazy">
+                  </div>
+                  <figcaption>Targeted nudity erasure on <strong>SD v1-4</strong>. Top: <strong>I2P</strong> prompts for target suppression. Bottom: <strong>COCO</strong> prompts for prior preservation. Uni-AdaVD maintains a better balance between erasure efficacy and non-target fidelity in these examples.</figcaption>
+                </figure>
+                <figure class="gallery-card carousel-slide">
+                  <div class="paper-ref">Fig. 7</div>
+                  <div class="gallery-media">
+                    <img src="assets/hires/sd3_flux_nudity_new.png" alt="FLUX and SD v3 nudity erasure results" loading="lazy">
+                  </div>
+                  <figcaption>Targeted nudity erasure on recent <strong>DiT-based</strong> diffusion models, with <strong>FLUX</strong> on the left and <strong>SD v3</strong> on the right. The top rows use <strong>I2P</strong> prompts, while the bottom rows assess prior preservation with <strong>COCO</strong> prompts.</figcaption>
+                </figure>
+                <figure class="gallery-card carousel-slide">
+                  <div class="paper-ref">Fig. 8</div>
+                  <div class="gallery-media">
+                    <img src="assets/hires/switti_nudity.png" alt="Switti-AR nudity erasure results" loading="lazy">
+                  </div>
+                  <figcaption><strong>Autoregressive</strong> transfer on <strong>Switti-AR</strong>. The left rows illustrate nudity erasure, while the right rows verify prior preservation, showing that the same intervention remains applicable beyond denoising-based architectures.</figcaption>
+                </figure>
+                <figure class="gallery-card carousel-slide">
+                  <div class="paper-ref">Fig. S2</div>
+                  <div class="gallery-media">
+                    <img src="assets/hires/nsfw_new2.png" alt="Broader unsafe concept erasure results" loading="lazy">
+                  </div>
+                  <figcaption>Broader implicit unsafe concept erasure across <strong>SD v1-4</strong> and <strong>FLUX</strong>, covering categories such as self-harm, hate, violence, sexual content, illegal activity, and shocking content beyond nudity alone.</figcaption>
+                </figure>
+              </div>
+            </div>
+            <div class="carousel-controls">
+              <button class="carousel-button carousel-button-prev" type="button" data-carousel-control="prev" aria-label="Previous NSFW result">
+                <span aria-hidden="true">&#8592;</span>
+              </button>
+              <button class="carousel-button carousel-button-next" type="button" data-carousel-control="next" aria-label="Next NSFW result">
+                <span aria-hidden="true">&#8594;</span>
+              </button>
+            </div>
+            <div class="carousel-footer">
+              <div class="carousel-meta">
+                <span class="carousel-counter"><span data-carousel-current>01</span> / <span data-carousel-total>04</span></span>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <section class="result-category reveal" id="results-instance">
+          <div class="result-header">
+            <div>
+              <div class="result-kicker">Instance</div>
+              <h3>Single-concept, multi-concept, and neighbor-preserving instance erasure</h3>
+              <p>Qualitative results for instance erasure under single-concept, multi-concept, and neighbor-concept settings on <strong>FLUX</strong>, <strong>Switti-AR</strong>, <strong>SD v1-4</strong>, and <strong>SD v3</strong>.</p>
+            </div>
+          </div>
+
+          <div class="results-carousel" data-carousel data-autoplay="6500">
+            <div class="carousel-viewport">
+              <div class="carousel-track">
+                <figure class="gallery-card carousel-slide">
+                  <div class="paper-ref">Fig. S3</div>
+                  <div class="gallery-media">
+                    <img src="assets/hires/flux_snoopy.png" alt="FLUX multi-concept instance erasure results" loading="lazy">
+                  </div>
+                  <figcaption>Multi-concept instance erasure on <strong>FLUX</strong>. From left to right, the figure erases one, two, and three target identities, including “Snoopy”, “Mickey”, and “SpongeBob”, while preserving non-target concepts such as “Dog” and “Legislator”.</figcaption>
+                </figure>
+                <figure class="gallery-card carousel-slide">
+                  <div class="paper-ref">Fig. S5</div>
+                  <div class="gallery-media">
+                    <img src="assets/hires/switti_snoopy.png" alt="Switti-AR instance erasure results" loading="lazy">
+                  </div>
+                  <figcaption>Instance concept erasure on <strong>Switti-AR</strong> targeting the single concept “Snoopy”. Uni-AdaVD removes the target identity while largely preserving the semantic and structural integrity of non-target concepts.</figcaption>
+                </figure>
+                <figure class="gallery-card carousel-slide">
+                  <div class="paper-ref">Fig. S6</div>
+                  <div class="gallery-media">
+                    <img src="assets/hires/neighbor2.png" alt="Neighbor concept preservation results" loading="lazy">
+                  </div>
+                  <figcaption>Neighbor concept erasure across <strong>SD v1-4</strong>, <strong>FLUX</strong>, and <strong>SD v3</strong>. Uni-AdaVD suppresses the target concepts while largely preserving neighboring categories such as related dog breeds, bird species, and flowers.</figcaption>
+                </figure>
+              </div>
+            </div>
+            <div class="carousel-controls">
+              <button class="carousel-button carousel-button-prev" type="button" data-carousel-control="prev" aria-label="Previous instance result">
+                <span aria-hidden="true">&#8592;</span>
+              </button>
+              <button class="carousel-button carousel-button-next" type="button" data-carousel-control="next" aria-label="Next instance result">
+                <span aria-hidden="true">&#8594;</span>
+              </button>
+            </div>
+            <div class="carousel-footer">
+              <div class="carousel-meta">
+                <span class="carousel-counter"><span data-carousel-current>01</span> / <span data-carousel-total>03</span></span>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <section class="result-category reveal" id="results-style">
+          <div class="result-header">
+            <div>
+              <div class="result-kicker">Style</div>
+              <h3>Style erasure while preserving non-target artistic priors</h3>
+              <p>Qualitative comparisons on <strong>FLUX</strong> and <strong>SD v3</strong>, highlighting target style removal and preservation of non-target styles.</p>
+            </div>
+          </div>
+
+          <div class="results-carousel" data-carousel data-autoplay="6500">
+            <div class="carousel-viewport">
+              <div class="carousel-track">
+                <figure class="gallery-card carousel-slide">
+                  <div class="paper-ref">Fig. S7</div>
+                  <div class="gallery-media">
+                    <img src="assets/hires/flux_style1_new.png" alt="FLUX style erasure results" loading="lazy">
+                  </div>
+                  <figcaption>Art style erasure on <strong>FLUX</strong>. From top to bottom, the subfigures target “Pencil Sketch”, “Van Gogh”, and “Stained Glass”, while preserving non-target styles such as “Pixel” and “Gothic”.</figcaption>
+                </figure>
+                <figure class="gallery-card carousel-slide">
+                  <div class="paper-ref">Fig. S8</div>
+                  <div class="gallery-media">
+                    <img src="assets/hires/sd3_style_new1.png" alt="SD v3 style erasure results" loading="lazy">
+                  </div>
+                  <figcaption>Style erasure on <strong>SD v3</strong> targeting “Pencil Sketch”, with prior preservation for other styles including “Van Gogh”, “Gothic”, “Pixel”, and “Stained Glass”.</figcaption>
+                </figure>
+              </div>
+            </div>
+            <div class="carousel-controls">
+              <button class="carousel-button carousel-button-prev" type="button" data-carousel-control="prev" aria-label="Previous style result">
+                <span aria-hidden="true">&#8592;</span>
+              </button>
+              <button class="carousel-button carousel-button-next" type="button" data-carousel-control="next" aria-label="Next style result">
+                <span aria-hidden="true">&#8594;</span>
+              </button>
+            </div>
+            <div class="carousel-footer">
+              <div class="carousel-meta">
+                <span class="carousel-counter"><span data-carousel-current>01</span> / <span data-carousel-total>02</span></span>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <section class="result-category reveal" id="results-celebrity">
+          <div class="result-header">
+            <div>
+              <div class="result-kicker">Celebrity</div>
+              <h3>Identity erasure with preservation of unrelated public figures</h3>
+              <p>Qualitative celebrity erasure results on <strong>SD v3</strong> and <strong>FLUX</strong>, targeting Bruce Lee while assessing preservation of other identities.</p>
+            </div>
+          </div>
+
+          <div class="results-carousel" data-carousel data-autoplay="6500">
+            <div class="carousel-viewport">
+              <div class="carousel-track">
+                <figure class="gallery-card carousel-slide">
+                  <div class="paper-ref">Fig. S9</div>
+                  <div class="gallery-media">
+                    <img src="assets/hires/sd3_flux_bruce.png" alt="Celebrity identity erasure across SD v3 and FLUX" loading="lazy">
+                  </div>
+                  <figcaption>Celebrity identity erasure on <strong>SD v3</strong> (top) and <strong>FLUX</strong> (bottom), targeting “Bruce Lee” while preserving unrelated identities including “Marilyn Monroe” and “Tom Cruise”.</figcaption>
+                </figure>
+              </div>
+            </div>
+            <div class="carousel-controls">
+              <button class="carousel-button carousel-button-prev" type="button" data-carousel-control="prev" aria-label="Previous celebrity result">
+                <span aria-hidden="true">&#8592;</span>
+              </button>
+              <button class="carousel-button carousel-button-next" type="button" data-carousel-control="next" aria-label="Next celebrity result">
+                <span aria-hidden="true">&#8594;</span>
+              </button>
+            </div>
+            <div class="carousel-footer">
+              <div class="carousel-meta">
+                <span class="carousel-counter"><span data-carousel-current>01</span> / <span data-carousel-total>01</span></span>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <section class="result-category reveal video-category" id="results-video">
+          <div class="result-header">
+            <div>
+              <div class="result-kicker">Video</div>
+              <h3>Transfer from image generation to <strong>text-to-video</strong> safety intervention</h3>
+              <p>Qualitative transfer to <strong>ZeroScopeT2V</strong> and <strong>CogVideoX</strong> for severe safety violations.</p>
+            </div>
+          </div>
+
+          <div class="results-carousel" data-carousel data-autoplay="6500">
+            <div class="carousel-viewport">
+              <div class="carousel-track">
+                <figure class="gallery-card carousel-slide">
+                  <div class="paper-ref">Fig. S12</div>
+                  <div class="gallery-media">
+                    <img src="assets/hires/video1new.png" alt="Video safety erasure results on ZeroScopeT2V and CogVideoX" loading="lazy">
+                  </div>
+                  <figcaption>Safety concept erasure on <strong>ZeroScopeT2V</strong> and <strong>CogVideoX</strong>. The figure targets “Animal Abuse” and “Sexual” prompts; the original videos exhibit severe violations, while Uni-AdaVD suppresses the harmful content and preserves reasonable visual structure.</figcaption>
+                </figure>
+              </div>
+            </div>
+            <div class="carousel-controls">
+              <button class="carousel-button carousel-button-prev" type="button" data-carousel-control="prev" aria-label="Previous video result">
+                <span aria-hidden="true">&#8592;</span>
+              </button>
+              <button class="carousel-button carousel-button-next" type="button" data-carousel-control="next" aria-label="Next video result">
+                <span aria-hidden="true">&#8594;</span>
+              </button>
+            </div>
+            <div class="carousel-footer">
+              <div class="carousel-meta">
+                <span class="carousel-counter"><span data-carousel-current>01</span> / <span data-carousel-total>01</span></span>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <section class="result-category reveal" id="results-transferability">
+          <div class="result-header">
+            <div>
+              <div class="result-kicker">Transferability</div>
+              <h3>Generalization to <strong>PixArt-Σ</strong> and larger <strong>autoregressive</strong> generators</h3>
+              <p>Qualitative transfer results on <strong>PixArt-Σ</strong>, <strong>Switti-AR</strong>, and <strong>Infinity-2B</strong>, illustrating generalization beyond the main benchmark models.</p>
+            </div>
+          </div>
+
+          <div class="results-carousel" data-carousel data-autoplay="6500">
+            <div class="carousel-viewport">
+              <div class="carousel-track">
+                <figure class="gallery-card carousel-slide">
+                  <div class="paper-ref">Fig. S10</div>
+                  <div class="gallery-media">
+                    <img src="assets/hires/pixel.png" alt="Transferability results on PixArt-Sigma" loading="lazy">
+                  </div>
+                  <figcaption>Concept erasure on <strong>PixArt-Σ</strong>. By intervening in the cross-attention text value space, Uni-AdaVD suppresses target instances such as “Snoopy” and target styles such as “Van Gogh”, while preserving non-target concepts under the same prompt context.</figcaption>
+                </figure>
+                <figure class="gallery-card carousel-slide">
+                  <div class="paper-ref">Fig. S11</div>
+                  <div class="gallery-media">
+                    <img src="assets/hires/swi-inf.png" alt="Transferability results on Switti-AR and Infinity-2B" loading="lazy">
+                  </div>
+                  <figcaption>Generalization to larger <strong>autoregressive</strong> generators, with <strong>Switti-AR</strong> on the top and <strong>Infinity-2B</strong> on the bottom. The left panel contrasts subject erasure versus style erasure, while the right panel suppresses “dog” or “cat” and preserves the non-target subject in an interactive scene.</figcaption>
+                </figure>
+              </div>
+            </div>
+            <div class="carousel-controls">
+              <button class="carousel-button carousel-button-prev" type="button" data-carousel-control="prev" aria-label="Previous transferability result">
+                <span aria-hidden="true">&#8592;</span>
+              </button>
+              <button class="carousel-button carousel-button-next" type="button" data-carousel-control="next" aria-label="Next transferability result">
+                <span aria-hidden="true">&#8594;</span>
+              </button>
+            </div>
+            <div class="carousel-footer">
+              <div class="carousel-meta">
+                <span class="carousel-counter"><span data-carousel-current>01</span> / <span data-carousel-total>02</span></span>
+              </div>
+            </div>
+          </div>
+        </section>
+      </section>
+
+      <section class="content-section citation-section" id="citation">
+        <div class="section-heading reveal">
+          <div class="eyebrow">Citation</div>
+          <h2>BibTeX</h2>
+        </div>
+
+        <div class="citation-box reveal">
+          <button class="copy-button" type="button" data-copy-target="bibtex">Copy</button>
+          <pre id="bibtex">@article{zhou2026uniadavd,
+  title  = {Uni-AdaVD: Universal Concept Erasure for Visual Generation via Orthogonal Value Decomposition},
+  author = {Qifan Zhou and Yuan Wang and Yanbin Hao and Xiang Wang and Kuien Liu and Richang Hong and Meng Wang},
+  year   = {2026},
+  note   = {Under review}
+}</pre>
+        </div>
+      </section>
+    </main>
+
+    <footer class="site-footer">
+      <p>Project page for Uni-AdaVD.</p>
+    </footer>
+  </div>
+
+  <script src="scripts/main.js"></script>
+</body>
+</html>
