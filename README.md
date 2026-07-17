@@ -4,7 +4,7 @@
 
 **Authors:** Qifan Zhou, Yuan Wang, Yanbin Hao, Xiang Wang, Kuien Liu, Richang Hong, and Meng Wang
 
-### [Project Website](https://qifanzhou.github.io/Uni-AdaVD/) | [Arxiv Preprint](https://qifanzhou.github.io/Uni-AdaVD/assets/TPAMI_2026_AdaVD_3.pdf)
+### [Project Website](https://qifanzhou.github.io/Uni-AdaVD/) | [Arxiv Preprint](https://arxiv.org/abs/2607.14521)
 
 ![Uni-AdaVD Overview](img/fig2.png)
 
@@ -137,4 +137,13 @@ All entry points write generated results under the path supplied through `--save
 
 ## Citation
 
-The paper citation will be added when the public manuscript is available.
+```bibtex
+@misc{zhou2026uniadavd,
+  title         = {Uni-AdaVD: Universal Concept Erasure for Visual Generation via Orthogonal Value Decomposition},
+  author        = {Qifan Zhou and Yuan Wang and Yanbin Hao and Xiang Wang and Kuien Liu and Richang Hong and Meng Wang},
+  year          = {2026},
+  eprint        = {2607.14521},
+  archivePrefix = {arXiv},
+  url           = {https://arxiv.org/abs/2607.14521}
+}
+```
