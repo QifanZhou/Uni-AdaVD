@@ -118,7 +118,7 @@ a {
 }
 
 .hero {
-  padding: 30px 20px;
+  padding: 42px 20px 46px;
 }
 
 .hero-copy {
@@ -285,16 +285,16 @@ a {
 }
 
 .content-section {
-  margin-top: 44px;
-  padding: 24px 20px;
+  margin-top: 60px;
+  padding: 32px 20px;
 }
 
 .section-heading {
-  margin-bottom: 24px;
+  margin-bottom: 34px;
 }
 
 .section-heading-compact {
-  margin-bottom: 16px;
+  margin-bottom: 22px;
 }
 
 .content-section h2 {
@@ -314,8 +314,8 @@ a {
   width: 100vw;
   margin-left: calc(50% - 50vw);
   margin-right: calc(50% - 50vw);
-  margin-top: 44px;
-  padding: 30px 0;
+  margin-top: 60px;
+  padding: 40px 0;
   background: #f3f3f3;
 }
 
@@ -845,8 +845,8 @@ a {
 }
 
 .site-footer {
-  margin-top: 20px;
-  padding: 22px 26px;
+  margin-top: 44px;
+  padding: 28px 26px;
   border: none;
   border-radius: 0;
   background: transparent;
@@ -907,16 +907,16 @@ a {
 
   .hero,
   .content-section {
-    padding: 18px 14px;
+    padding: 24px 14px;
   }
 
   .content-section {
-    margin-top: 32px;
+    margin-top: 40px;
   }
 
   #abstract {
-    margin-top: 32px;
-    padding: 24px 0;
+    margin-top: 40px;
+    padding: 30px 0;
   }
 
   .hero h1 {
