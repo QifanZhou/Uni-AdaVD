@@ -30,16 +30,13 @@
     <main>
       <section class="hero section-frame" id="top">
         <div class="hero-copy reveal">
-          <div class="eyebrow">Project Page</div>
           <div class="hero-title-lockup">
             <h1>
-              <span class="hero-title-line"><span class="hero-wordmark">Uni-AdaVD</span>: Universal Concept Erasure for Visual Generation via Orthogonal Value Decomposition</span>
+              <span class="hero-title-line"><span class="hero-wordmark">Uni-AdaVD</span></span>
+              <span class="hero-title-line hero-subtitle-line">Universal Concept Erasure for Visual Generation via</span>
+              <span class="hero-title-line hero-subtitle-line">Orthogonal Value Decomposition</span>
             </h1>
           </div>
-          <p class="hero-lede">
-            A universal inference-time framework that performs concept erasure in the attention value space and
-            transfers across U-Net, DiT, autoregressive image generation, and text-to-video models.
-          </p>
 
           <div class="author-line">
             Qifan Zhou*, Yuan Wang*, Yanbin Hao, Xiang Wang, Kuien Liu, Richang Hong, and Meng Wang
@@ -52,7 +49,7 @@
 
           <div class="hero-actions">
             <a class="button button-primary" href="https://arxiv.org/pdf/2607.14521" target="_blank" rel="noreferrer">Paper</a>
-            <a class="button button-secondary" href="https://github.com/QifanZhou/Uni-AdaVD" target="_blank" rel="noreferrer">Code</a>
+            <a class="button button-primary" href="https://github.com/QifanZhou/Uni-AdaVD" target="_blank" rel="noreferrer">Code</a>
           </div>
         </div>
       </section>
@@ -68,10 +65,10 @@
             concept erasure essential for safe deployment. Existing erasure methods, however, are often
             architecture-specific and struggle to remove target concepts while preserving non-target content and
             generative priors. We present <strong>Uni-AdaVD, a universal inference-time concept erasure framework</strong> for visual
-            generation. Uni-AdaVD treats <strong>the value space of multimodal attention as a unified intervention space</strong> and
-            introduces <strong>encoder-aware target representation construction</strong> to localize target semantics across
-            heterogeneous text encoders. It further combines <strong>orthogonal value decomposition with a layer-wise adaptive
-            erasing shift</strong> to suppress target semantic directions without updating the original model weights. Extensive
+            generation. Uni-AdaVD treats the <strong>value space</strong> of multimodal attention as a unified intervention space and
+            introduces encoder-aware target representation construction to localize target semantics across
+            heterogeneous text encoders. It further combines orthogonal value decomposition with a layer-wise adaptive
+            erasing shift to suppress target semantic directions without updating the original model weights. Extensive
             experiments on U-Net-, DiT-, and autoregressive image generators, as well as text-to-video models,
             demonstrate strong performance on single- and multi-concept erasure while preserving non-target priors.
           </p>
@@ -102,18 +99,9 @@
               later OVD-style design in Uni-AdaVD.
             </p>
             <div class="legacy-links">
-              <a class="pill-link" href="https://cvpr.thecvf.com/virtual/2025/poster/34263" target="_blank" rel="noreferrer">Paper</a>
-              <a class="pill-link" href="https://github.com/WYuan1001/AdaVD" target="_blank" rel="noreferrer">Code</a>
+              <a class="pill-link pill-link-primary" href="https://cvpr.thecvf.com/virtual/2025/poster/34263" target="_blank" rel="noreferrer">Paper</a>
+              <a class="pill-link pill-link-primary" href="https://github.com/WYuan1001/AdaVD" target="_blank" rel="noreferrer">Code</a>
             </div>
-          </article>
-
-          <article class="legacy-card reveal">
-            <div class="legacy-kicker">What Uni-AdaVD Adds</div>
-            <ul class="legacy-list">
-              <li>It extends the original U-Net / SD v1-4 setting to DiT, autoregressive, and text-to-video generators.</li>
-              <li>It broadens the erasure scope from the earlier explicit setting to more implicit unsafe concepts and diverse visual targets.</li>
-              <li>It introduces encoder-aware target representation construction together with OVD and LAES to support heterogeneous text encoders while preserving non-target priors.</li>
-            </ul>
           </article>
         </div>
       </section>
@@ -154,15 +142,13 @@
         <div class="method-detail-grid">
           <article class="text-card reveal">
             <div class="eyebrow eyebrow-small">Why Value Space</div>
-            <h3>Value interventions change semantic identity more directly than key swaps</h3>
             <p>
-              In FLUX joint attention, swapping value sequences changes the generated concept identity much more
-              strongly than swapping key sequences. This makes value vectors the more direct and transferable control
-              surface for concept erasure.
+              In FLUX joint attention, value swapping changes concept identity more strongly than key swapping,
+              making value vectors a more direct and transferable intervention surface for concept erasure.
             </p>
             <p>
-              That observation motivates Uni-AdaVD to intervene on the value side first, then use OVD and LAES to
-              suppress the target semantics without broadly damaging the model priors.
+              This motivates Uni-AdaVD to operate on the value side and combine OVD with LAES to suppress target
+              semantics while preserving model priors.
             </p>
           </article>
 
@@ -180,15 +166,6 @@
             Qualitative comparisons are organized by task to highlight erasure efficacy and non-target preservation
             across image and video generation models.
           </p>
-        </div>
-
-        <div class="results-nav reveal" aria-label="Result categories">
-          <a href="#results-nsfw">NSFW</a>
-          <a href="#results-instance">Instance</a>
-          <a href="#results-style">Style</a>
-          <a href="#results-celebrity">Celebrity</a>
-          <a href="#results-video">Video</a>
-          <a href="#results-transferability">Transferability</a>
         </div>
 
         <section class="result-category reveal" id="results-nsfw">
@@ -385,7 +362,7 @@
           <div class="result-header">
             <div>
               <div class="result-kicker">Video</div>
-              <h3>Transfer from image generation to <strong>text-to-video</strong> safety intervention</h3>
+              <h3>Transfer from image generation to <strong>text-to-video generation</strong></h3>
               <p>Qualitative transfer to <strong>ZeroScopeT2V</strong> and <strong>CogVideoX</strong> for severe safety violations.</p>
             </div>
           </div>
