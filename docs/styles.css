@@ -313,7 +313,7 @@ a {
 .section-intro {
   max-width: none;
   margin: 16px 0 0;
-  font-size: 1.46rem;
+  font-size: 1.38rem;
   color: var(--muted);
   line-height: 1.82;
 }
@@ -399,7 +399,7 @@ a {
 .legacy-card p,
 .legacy-list li {
   margin: 0;
-  font-size: 1.46rem;
+  font-size: 1.38rem;
   color: var(--muted);
   line-height: 1.9;
 }
