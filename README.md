@@ -138,12 +138,10 @@ All entry points write generated results under the path supplied through `--save
 ## Citation
 
 ```bibtex
-@misc{zhou2026uniadavd,
-  title         = {Uni-AdaVD: Universal Concept Erasure for Visual Generation via Orthogonal Value Decomposition},
-  author        = {Qifan Zhou and Yuan Wang and Yanbin Hao and Xiang Wang and Kuien Liu and Richang Hong and Meng Wang},
-  year          = {2026},
-  eprint        = {2607.14521},
-  archivePrefix = {arXiv},
-  url           = {https://arxiv.org/abs/2607.14521}
+@article{zhou2026uni,
+  title={Uni-AdaVD: Universal Concept Erasure for Visual Generation via Orthogonal Value Decomposition},
+  author={Zhou, Qifan and Wang, Yuan and Hao, Yanbin and Wang, Xiang and Liu, Kuien and Hong, Richang and Wang, Meng},
+  journal={arXiv preprint arXiv:2607.14521},
+  year={2026}
 }
 ```
